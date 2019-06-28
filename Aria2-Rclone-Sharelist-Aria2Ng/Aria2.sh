@@ -213,7 +213,8 @@ rpc-allow-origin-all=true
 rpc-listen-all=true
 rpc-listen-port=6800
 
-
+save-session-interval=60
+force-save=true
 
 follow-torrent=true
 listen-port=51413
