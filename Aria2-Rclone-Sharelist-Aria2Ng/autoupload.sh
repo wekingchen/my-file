@@ -19,8 +19,6 @@ elif [ "$path" = "$downloadpath" ]   #文件夹
 	while [[ "`ls -A "$filepath/"`" != "" ]]; do
     rclone move "$filepath"/ ${name}:${folder}/"${filepath##*/}"/ --delete-empty-src-dirs
 	done
-	rm -rf "$filepath/"
-	rm -rf "/root/sharelist-master/cache/db.json"
     exit 0
 fi
 done
