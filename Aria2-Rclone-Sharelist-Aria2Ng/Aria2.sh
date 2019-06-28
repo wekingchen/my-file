@@ -262,7 +262,7 @@ update-rc.d -f aria2 defaults
 wget https://raw.githubusercontent.com/wekingchen/my-file/master/Aria2-Rclone-Sharelist-Aria2Ng/autoupload.sh
 sed -i '4i\name='${name}'' autoupload.sh
 sed -i '4i\folder='${folder}'' autoupload.sh
-sed -i "21i\rm -rf \"\$filepath/\" && curl  --data \"a=clear_cache\" \"http://127.0.0.1:33001/manage/api/${passsharelist}\" && rm -rf \"/root/sharelist-master/cache/db.json\"" autoupload.sh
+sed -i "24i\rm -rf \"\$filepath/\" && curl  --data \"a=clear_cache\" \"http://127.0.0.1:33001/manage/api/${passsharelist}\" && rm -rf \"/root/sharelist-master/cache/db.json\"" autoupload.sh
 mv autoupload.sh /root/.aria2/autoupload.sh
 chmod +x /root/.aria2/autoupload.sh
 wget --no-check-certificate https://raw.githubusercontent.com/wekingchen/my-file/master/Aria2-Rclone-Sharelist-Aria2Ng/caddy_debian -O /etc/init.d/caddy
