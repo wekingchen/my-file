@@ -116,9 +116,10 @@ sharelist_install(){
 	unzip sharelist-master
 	cd sharelist-master
 	bash install.sh
-	echo "http://${domain} {
+	echo "https://${domain} {
  gzip
  proxy / http://127.0.0.1:33001
+ tls ssl@ddns.date
 }" > /usr/local/caddy/Caddyfile
 }
 
