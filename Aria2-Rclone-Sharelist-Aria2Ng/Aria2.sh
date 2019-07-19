@@ -112,9 +112,8 @@ port_exist_check(){
 
 sharelist_install(){
 	cd /root
-	wget https://codeload.github.com/reruin/sharelist/zip/master  -O sharelist-master.zip
-	unzip sharelist-master
-	cd sharelist-master
+	git clone https://github.com/reruin/sharelist
+	cd sharelist
 	bash install.sh
 	echo "https://${domain} {
  gzip
