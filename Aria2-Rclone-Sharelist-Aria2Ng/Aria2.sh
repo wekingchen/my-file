@@ -22,7 +22,7 @@ Error="${Red}[Error]${Font}"
 caddyfile="/usr/local/caddy/"
 caddy_file="/usr/local/caddy/caddy"
 caddy_conf_file="/usr/local/caddy/Caddyfile"
-aria2ng_new_ver="1.1.1"
+aria2ng_new_ver="1.1.2"
 aria2ng_download_http="https://github.com/mayswind/AriaNg/releases/download/${aria2ng_new_ver}/AriaNg-${aria2ng_new_ver}.zip"
 aria2_new_ver="1.34.0"
 
@@ -135,6 +135,7 @@ aria2ng_install(){
   root /home/wwwroot/${domain2}
   timeouts none
   gzip
+  tls ssl@ddns.date
   browse
 }" >> /usr/local/caddy/Caddyfile
 }
@@ -192,6 +193,10 @@ chmod 777 /root/.aria2/aria2.session
 echo "dir=/root/Download
 rpc-secret=${pass}
 
+#启用RPC服务的SSL/TLS加密
+rpc-secure=true
+rpc-certificate=/.caddy/acme/acme-v02.api.letsencrypt.org/sites/${domain2}/${domain2}.crt
+rpc-private-key=/.caddy/acme/acme-v02.api.letsencrypt.org/sites/${domain2}/${domain2}.key
 
 disk-cache=32M
 file-allocation=trunc
