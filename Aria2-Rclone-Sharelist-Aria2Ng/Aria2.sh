@@ -131,7 +131,7 @@ aria2ng_install(){
         echo -e "${Error} ${RedBG} AriaNg 下载失败 ${Font}"
         exit 1
     fi
-	echo "http://${domain2} {
+	echo "https://${domain2} {
   root /home/wwwroot/${domain2}
   timeouts none
   gzip
