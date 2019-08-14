@@ -44,7 +44,7 @@ check_system(){
 	port_exist_check 33001
 	port_exist_check 6800
 	apt-get update
-	apt install wget unzip net-tools bc curl sudo -y
+	apt-get install -y wget unzip net-tools bc curl sudo git
 }
 
 # 判定是否为root用户
