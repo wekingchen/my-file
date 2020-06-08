@@ -1,6 +1,6 @@
 #!/bin/sh
 cd /jffs/
-wget "https://raw.githubusercontent.com/wekingchen/my-file/kms/master/vlmcsd"
+wget "https://raw.githubusercontent.com/wekingchen/my-file/master/kms/vlmcsd"
 chmod 0755 vlmcsd
 /jffs/vlmcsd
 clear
