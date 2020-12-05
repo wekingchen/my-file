@@ -22,7 +22,7 @@ Error="${Red}[Error]${Font}"
 caddyfile="/usr/local/caddy/"
 caddy_file="/usr/local/caddy/caddy"
 caddy_conf_file="/usr/local/caddy/Caddyfile"
-aria2ng_new_ver="1.1.4"
+aria2ng_new_ver="1.1.7"
 aria2ng_download_http="https://github.com/mayswind/AriaNg/releases/download/${aria2ng_new_ver}/AriaNg-${aria2ng_new_ver}.zip"
 aria2_new_ver="1.35.0"
 
