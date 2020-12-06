@@ -9,3 +9,7 @@ kms                             梅林路由器一键脚本架设kms服务
 Aria2-Rclone-Sharelist-Aria2Ng  自动下载并上传到GDrive
 执行以下命令：
 wget -N --no-check-certificate https://raw.githubusercontent.com/wekingchen/my-file/master/Aria2-Rclone-Sharelist-Aria2Ng/Aria2.sh && chmod +x Aria2.sh && bash Aria2.sh
+
+caddy                           Caddy1.0.4安装脚本
+执行以下命令：
+wget -N --no-check-certificate https://raw.githubusercontent.com/wekingchen/my-file/master/caddy/caddy_install.sh && chmod +x caddy_install.sh && bash caddy_install.sh
