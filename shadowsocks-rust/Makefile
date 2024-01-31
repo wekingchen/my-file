@@ -14,6 +14,15 @@ PKG_SOURCE_BODY:=unknown-linux-musl
 PKG_SOURCE_FOOTER:=tar.xz
 PKG_SOURCE_URL:=https://github.com/shadowsocks/shadowsocks-rust/releases/download/v$(PKG_VERSION)/
 
+# 下面PKG包的HASH值按顺序对应的包名分别是，后续升级可手动更新HASH：
+# shadowsocks-v1.17.1.aarch64-unknown-linux-musl.tar.xz
+# shadowsocks-v1.17.1.arm-unknown-linux-musleabi.tar.xz
+# shadowsocks-v1.17.1.arm-unknown-linux-musleabihf.tar.xz
+# shadowsocks-v1.17.1.i686-unknown-linux-musl.tar.xz
+# shadowsocks-v1.17.1.mips-unknown-linux-musl.tar.xz
+# shadowsocks-v1.17.1.mipsel-unknown-linux-musl.tar.xz
+# shadowsocks-v1.17.1.x86_64-unknown-linux-musl.tar.xz
+
 ifeq ($(ARCH),aarch64)
   PKG_SOURCE:=$(PKG_SOURCE_HEADER).aarch64-$(PKG_SOURCE_BODY).$(PKG_SOURCE_FOOTER)
   PKG_HASH:=ac172822b579ac0fe59e4cc519e9f4ffee32ed069b10ffdc7421fb1bfdb8c03e
